@@ -1,0 +1,93 @@
+{
+  "obd": {
+    "bluetooth_address": null,
+    "connection_timeout_seconds": 10,
+    "fast_pids": [
+      "RPM",
+      "SPEED",
+      "THROTTLE_POS"
+    ],
+    "slow_pids": [
+      "COOLANT_TEMP",
+      "INTAKE_TEMP",
+      "MAF",
+      "ENGINE_LOAD",
+      "TIMING_ADVANCE",
+      "SHORT_FUEL_TRIM_1",
+      "LONG_FUEL_TRIM_1",
+      "O2_B1S1",
+      "FUEL_STATUS",
+      "BAROMETRIC_PRESSURE"
+    ],
+    "poll_rate_hz": 10
+  },
+  "accelerometer": {
+    "i2c_address": "0x68",
+    "sample_rate_hz": 50,
+    "accel_range_g": 4,
+    "gyro_range_dps": 500,
+    "calibration": {
+      "accel_offset_x": 0.0,
+      "accel_offset_y": 0.0,
+      "accel_offset_z": 0.0,
+      "gyro_offset_x": 0.0,
+      "gyro_offset_y": 0.0,
+      "gyro_offset_z": 0.0,
+      "rotation_matrix": [
+        [1, 0, 0],
+        [0, 1, 0],
+        [0, 0, 1]
+      ]
+    },
+    "filter": {
+      "type": "complementary",
+      "alpha": 0.98
+    }
+  },
+  "gps": {
+    "device": "/dev/serial0",
+    "baud_rate": 9600,
+    "sample_rate_hz": 5,
+    "min_satellites": 4,
+    "coordinate_offset": {
+      "latitude": 0.0,
+      "longitude": 0.0
+    }
+  },
+  "temperature": {
+    "sensors": {
+      "28-000000000001": {
+        "name": "engine_oil",
+        "location": "Oil dipstick tube",
+        "warning_threshold_f": 280,
+        "critical_threshold_f": 300
+      },
+      "28-000000000002": {
+        "name": "intake_air",
+        "location": "Intake manifold",
+        "warning_threshold_f": 140,
+        "critical_threshold_f": 160
+      },
+      "28-000000000003": {
+        "name": "brake_fluid",
+        "location": "Brake reservoir",
+        "warning_threshold_f": 250,
+        "critical_threshold_f": 300
+      },
+      "28-000000000004": {
+        "name": "transmission",
+        "location": "Transmission pan",
+        "warning_threshold_f": 240,
+        "critical_threshold_f": 260
+      },
+      "28-000000000005": {
+        "name": "ambient",
+        "location": "Ambient air",
+        "warning_threshold_f": 999,
+        "critical_threshold_f": 999
+      }
+    },
+    "sample_rate_hz": 1,
+    "conversion_retries": 3
+  }
+}

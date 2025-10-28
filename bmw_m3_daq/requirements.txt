@@ -1,0 +1,49 @@
+# BMW M3 Data Acquisition System - Python Dependencies
+
+# OBD-II Interface
+python-obd==0.7.1
+pyserial==3.5
+
+# GPS Module
+gpsd-py3==0.3.0
+
+# I2C/Sensors
+smbus2==0.4.2
+adafruit-circuitpython-mpu6050==1.2.3
+
+# Temperature Sensors (1-Wire)
+w1thermsensor==2.0.0
+
+# Data Analysis
+numpy==1.24.3
+pandas==2.0.2
+scipy==1.10.1
+
+# Visualization
+matplotlib==3.7.1
+seaborn==0.12.2
+plotly==5.14.1
+
+# Web Dashboard
+flask==2.3.2
+flask-socketio==5.3.4
+python-socketio==5.9.0
+eventlet==0.33.3
+
+# Configuration
+pyyaml==6.0
+
+# Utilities
+python-dateutil==2.8.2
+pytz==2023.3
+
+# System
+psutil==5.9.5
+
+# Export formats
+openpyxl==3.1.2
+simplekml==1.3.6
+
+# Testing
+pytest==7.3.1
+pytest-mock==3.11.1

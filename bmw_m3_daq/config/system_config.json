@@ -1,0 +1,46 @@
+{
+  "system": {
+    "name": "BMW M3 DAQ System",
+    "version": "1.0.0",
+    "auto_start_logging": false,
+    "simulation_mode": false
+  },
+  "data": {
+    "base_path": "data/sessions",
+    "log_path": "logs",
+    "csv_buffer_size": 100,
+    "file_rotation_mb": 100,
+    "compress_old_sessions": true,
+    "retention_days": 365
+  },
+  "logging": {
+    "level": "INFO",
+    "console_output": true,
+    "file_output": true,
+    "max_file_size_mb": 10,
+    "backup_count": 5
+  },
+  "dashboard": {
+    "enabled": true,
+    "host": "0.0.0.0",
+    "port": 5000,
+    "update_rate_hz": 10,
+    "theme": "dark"
+  },
+  "performance": {
+    "main_loop_rate_hz": 50,
+    "use_threading": true,
+    "sensor_timeout_seconds": 5
+  },
+  "alerts": {
+    "enabled": true,
+    "temperature_warnings": true,
+    "connection_warnings": true,
+    "disk_space_warning_mb": 500
+  },
+  "export": {
+    "auto_export_kml": true,
+    "auto_generate_summary": true,
+    "excel_export_format": "xlsx"
+  }
+}
