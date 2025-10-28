@@ -1,0 +1,59 @@
+{
+  "session_info": {
+    "duration_seconds": 299.98,
+    "total_samples": 15000
+  },
+  "zero_to_sixty": {
+    "found": true,
+    "time_seconds": 4.85,
+    "avg_g_force": 0.38,
+    "num_runs": 3
+  },
+  "sixty_to_zero": {
+    "found": true,
+    "time_seconds": 2.95,
+    "avg_g_force": 0.62,
+    "distance_feet": 128.5
+  },
+  "quarter_mile": {
+    "found": false
+  },
+  "max_values": {
+    "max_speed_mph": 135.0,
+    "max_rpm": 7800.0,
+    "max_accel_g": 0.41,
+    "max_braking_g": 0.67,
+    "max_lateral_g": 1.127,
+    "max_total_g": 1.127,
+    "temp_oil_f_max": 226.0,
+    "temp_intake_f_max": 123.0,
+    "temp_brake_f_max": 239.0,
+    "temp_trans_f_max": 223.0
+  },
+  "laps": {
+    "num_laps": 4,
+    "best_lap_time": 87.3,
+    "all_laps": [
+      {
+        "lap_number": 1,
+        "lap_time_seconds": 91.2,
+        "max_speed_mph": 118.5
+      },
+      {
+        "lap_number": 2,
+        "lap_time_seconds": 87.3,
+        "max_speed_mph": 124.8
+      },
+      {
+        "lap_number": 3,
+        "lap_time_seconds": 88.1,
+        "max_speed_mph": 122.3
+      },
+      {
+        "lap_number": 4,
+        "lap_time_seconds": 89.5,
+        "max_speed_mph": 120.1
+      }
+    ]
+  }
+}

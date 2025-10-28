@@ -1,0 +1,28 @@
+{
+  "session_start": "2025-10-28T10:55:11.242146",
+  "session_end": "2025-10-28T10:55:12.227079",
+  "duration_seconds": 300,
+  "samples_collected": 15000,
+  "errors": {
+    "obd": 0,
+    "accelerometer": 0,
+    "gps": 0,
+    "temperature": 0
+  },
+  "vehicle": {
+    "year": 2001,
+    "make": "BMW",
+    "model": "M3",
+    "variant": "E46"
+  },
+  "simulation_mode": false,
+  "location": "Buttonwillow Raceway Park",
+  "track_config": "Configuration 13CW",
+  "weather": "Clear, 78\u00b0F",
+  "tire_pressure_psi": {
+    "FL": 34,
+    "FR": 34,
+    "RL": 36,
+    "RR": 36
+  }
+}

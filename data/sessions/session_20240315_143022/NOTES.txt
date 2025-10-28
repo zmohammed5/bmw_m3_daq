@@ -1,0 +1,47 @@
+Track Day Session - March 15, 2024
+Buttonwillow Raceway Park - Configuration 13CW
+
+VEHICLE SETUP:
+- 2001 BMW M3 E46
+- Stock engine and transmission
+- Michelin Pilot Sport 4S tires
+- Tire pressure: FL 34psi, FR 34psi, RL 36psi, RR 36psi
+- Brake fluid: Motul RBF 600 (fresh)
+- Oil: Mobil 1 0W-40 European Car Formula
+
+WEATHER CONDITIONS:
+- Clear skies
+- Ambient temperature: 78°F
+- Track temperature: ~95°F
+- Light wind
+
+SESSION SUMMARY:
+- Total time: 5 minutes (300 seconds)
+- Best lap: 87.3 seconds (Lap 2)
+- Max speed: 135 mph (front straight)
+- Max lateral g-force: 1.13g (Turn 6)
+
+PERFORMANCE METRICS:
+- 0-60 mph: 4.85 seconds
+- 60-0 braking: 128.5 feet
+- Peak oil temp: 223°F
+- Peak brake temp: 233°F
+
+LAPS:
+1. 91.2s - Warmup lap, learning line
+2. 87.3s - Best lap, clean run
+3. 88.1s - Slight understeer in Turn 8
+4. 89.5s - Traffic in Turn 3
+
+NOTES:
+- Car felt great, very balanced
+- Brake fade minimal even after 4 laps
+- Could use more front camber for Turn 6
+- Oil temps stayed reasonable
+- Shift lights working perfectly at 7800 RPM
+
+NEXT TIME:
+- Try different line through Turn 8
+- Maybe add 1 psi rear tire pressure
+- Check front brake pad thickness
+- Consider adjustable sway bars

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMW M3 DAQ Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1>BMW M3 DAQ</h1>
+            <div class="vehicle-info">
+                {{ vehicle.year }} {{ vehicle.make }} {{ vehicle.model }}
+            </div>
+        </header>
+
+        <!-- Connection Status -->
+        <div class="status-bar">
+            <div class="status-item" id="status-obd">
+                <span class="status-dot"></span>
+                <span>OBD-II</span>
+            </div>
+            <div class="status-item" id="status-accel">
+                <span class="status-dot"></span>
+                <span>Accel</span>
+            </div>
+            <div class="status-item" id="status-gps">
+                <span class="status-dot"></span>
+                <span>GPS</span>
+            </div>
+            <div class="status-item" id="status-temp">
+                <span class="status-dot"></span>
+                <span>Temp</span>
+            </div>
+        </div>
+
+        <!-- Main Gauges -->
+        <div class="gauges-grid">
+            <!-- RPM Gauge -->
+            <div class="gauge-card">
+                <div class="gauge-label">RPM</div>
+                <div class="gauge-value" id="rpm-value">0</div>
+                <div class="gauge-bar">
+                    <div class="gauge-fill" id="rpm-fill" style="width: 0%"></div>
+                </div>
+                <div class="gauge-range">0 - 8000</div>
+            </div>
+
+            <!-- Speed Gauge -->
+            <div class="gauge-card">
+                <div class="gauge-label">Speed</div>
+                <div class="gauge-value" id="speed-value">0<span class="unit">mph</span></div>
+                <div class="gauge-bar">
+                    <div class="gauge-fill" id="speed-fill" style="width: 0%"></div>
+                </div>
+                <div class="gauge-range">0 - 155</div>
+            </div>
+
+            <!-- Throttle Gauge -->
+            <div class="gauge-card">
+                <div class="gauge-label">Throttle</div>
+                <div class="gauge-value" id="throttle-value">0<span class="unit">%</span></div>
+                <div class="gauge-bar">
+                    <div class="gauge-fill" id="throttle-fill" style="width: 0%"></div>
+                </div>
+                <div class="gauge-range">0 - 100</div>
+            </div>
+        </div>
+
+        <!-- G-Force Display -->
+        <div class="section-title">Acceleration</div>
+        <div class="g-force-grid">
+            <div class="g-force-card">
+                <div class="g-label">Longitudinal</div>
+                <div class="g-value" id="g-long">0.00<span class="unit">g</span></div>
+                <div class="g-bar">
+                    <div class="g-fill" id="g-long-fill" style="width: 50%"></div>
+                </div>
+            </div>
+            <div class="g-force-card">
+                <div class="g-label">Lateral</div>
+                <div class="g-value" id="g-lat">0.00<span class="unit">g</span></div>
+                <div class="g-bar">
+                    <div class="g-fill" id="g-lat-fill" style="width: 50%"></div>
+                </div>
+            </div>
+            <div class="g-force-card">
+                <div class="g-label">Total</div>
+                <div class="g-value" id="g-total">0.00<span class="unit">g</span></div>
+            </div>
+        </div>
+
+        <!-- Temperature Grid -->
+        <div class="section-title">Temperatures</div>
+        <div class="temp-grid">
+            <div class="temp-card">
+                <div class="temp-label">Oil</div>
+                <div class="temp-value" id="temp-oil">--<span class="unit">°F</span></div>
+            </div>
+            <div class="temp-card">
+                <div class="temp-label">Intake</div>
+                <div class="temp-value" id="temp-intake">--<span class="unit">°F</span></div>
+            </div>
+            <div class="temp-card">
+                <div class="temp-label">Brake</div>
+                <div class="temp-value" id="temp-brake">--<span class="unit">°F</span></div>
+            </div>
+            <div class="temp-card">
+                <div class="temp-label">Trans</div>
+                <div class="temp-value" id="temp-trans">--<span class="unit">°F</span></div>
+            </div>
+        </div>
+
+        <!-- GPS Info -->
+        <div class="section-title">GPS</div>
+        <div class="info-grid">
+            <div class="info-card">
+                <div class="info-label">GPS Speed</div>
+                <div class="info-value" id="gps-speed">0<span class="unit">mph</span></div>
+            </div>
+            <div class="info-card">
+                <div class="info-label">Satellites</div>
+                <div class="info-value" id="gps-sats">0</div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="update-time">Last update: <span id="last-update">--</span></div>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+</body>
+</html>
